@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+chown git /backup
+su - git -c 'cd /backup && /app/gitea/gitea dump -c /data/gitea/conf/app.ini -f gitea-dump-`date -I`.zip'
